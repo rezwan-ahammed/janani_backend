@@ -14,8 +14,9 @@ export default {
       const body = await request.json();
       const { prompt } = body;
 
+      // 🔴 এখানে আপনার দেওয়া সঠিক মডেলের নামটি বসানো হয়েছে 🔴
       const response = await env.AI.run(
-        '@cf/anthropic/claude-3-haiku-20240307', 
+        'anthropic/claude-haiku-4.5', 
         {
           messages: [{ role: 'user', content: prompt }],
           max_tokens: 1024,
