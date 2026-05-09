@@ -1,3 +1,6 @@
-name = "janani_backend"
+name = "jananibackend"
 main = "worker.js"
 compatibility_date = "2026-05-08"
+
+[ai]
+binding = "AI"
