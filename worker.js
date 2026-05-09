@@ -14,12 +14,11 @@ export default {
       const body = await request.json();
       const { prompt } = body;
 
-      // 🔴 এখানে আপনার দেওয়া সঠিক মডেলের নামটি বসানো হয়েছে 🔴
+      // 🔴 আপনার নির্বাচিত Google Gemma মডেল 🔴
       const response = await env.AI.run(
-        'anthropic/claude-haiku-4.5', 
+        '@cf/google/gemma-4-26b-a4b-it', 
         {
-          messages: [{ role: 'user', content: prompt }],
-          max_tokens: 1024,
+          messages: [{ role: 'user', content: prompt }]
         },
         { gateway: { id: 'default' } }
       );
